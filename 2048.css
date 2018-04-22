@@ -1,0 +1,90 @@
+p{
+	width:480px;
+	margin:0 auto;
+	margin-bottom: 30px;
+	font-size:40px;
+	font-family:Arial;
+	font-weight:bold;
+	padding-top:15px;
+}
+#gridPanel{
+	width:480px;
+	height:480px;
+	margin:0 auto;
+	position:relative;
+	background:#bbada0;
+	border-radius:10px;
+}
+.cell{
+	width:100px;
+	height:100px;
+	position:absolute;
+	border-radius:6px;
+	background:#ccc0b3;
+	line-height:100px;
+	font-size:64px;
+	text-align:center;
+	color:#fff;
+}
+#gameOver{
+	display:none;
+	position:absolute;
+	/* width:100%;height:100%; */
+	top:0;left:0;right:0;bottom:0;
+	background:rgba(55,55,55,.5);
+	/* color:red; */
+}
+#gameOver>p{
+	/* 垂直水平居中、圆角、边框 */
+	width:300px;height:200px;
+	position:absolute;top:50%;left:50%;
+	margin-top:-100px;margin-left:-150px;
+	text-align:center;line-height:1.5em;
+	border-radius:10px;border:1px solid #edcf72;
+	font-size:30px ;
+	background:#FFCE44;
+}
+#gameOver>p a{
+	/* 取消下划线、背景*/
+	background: #aaa;
+	display: inline-block;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	margin-top:10px;
+	text-decoration:none;
+	color:#EA1B26;
+	padding: 10px;
+}
+#gameOver>p a:hover{
+	background: #999;
+}
+/* 类选择器 */
+/* 行为计算标准 */
+[id^="c0"]{top:16px}
+[id^="c1"]{top:132px}
+[id^="c2"]{top:248px}
+[id^="c3"]{top:364px}
+/* 列为计算标准 */
+[id$="0"]{left:16px}
+[id$="1"]{left:132px}
+[id$="2"]{left:248px}
+[id$="3"]{left:364px}
+
+/* 累计的数字越大，颜色字体相应的改变 */
+.n2{background-color:#eee3da}
+.n4{background-color:#ede0c8}
+.n8{background-color:#f2b179}
+.n16{background-color:#f59563}
+.n32{background-color:#f67c5f}
+.n64{background-color:#f65e3b}
+.n128{background-color:#edcf72;font-size:56px}
+.n256{background-color:#edcc61;font-size:56px}
+.n512{background-color:#9c0;font-size:56px}
+.n1024{background-color:#33b5e5}
+.n2048{background-color:#09c}
+.n4096{background-color:#a6c}
+.n8192{background-color:#93c}
+.n2,.n4{color:#776e65}
+.n1024,.n2048,.n4096,.n8192{font-size:40px}
+
+
